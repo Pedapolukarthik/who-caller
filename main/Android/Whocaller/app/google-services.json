@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "43907716246",
+    "project_id": "whocaller-23d6c",
+    "storage_bucket": "whocaller-23d6c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43907716246:android:676d2a265100eae246deb7",
+        "android_client_info": {
+          "package_name": "com.androplaza.whocaller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43907716246-svij9dhoh7f87s53epbmuicah2vn1diq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.androplaza.whocaller",
+            "certificate_hash": "d80ed234e3c6117a30e7bff6b7a4af0ea97a63a9"
+          }
+        },
+        {
+          "client_id": "43907716246-3cdb3aoubriqn5snhbf9aauahgq0uer6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7vesW1vGDtPiLWksv6BYcf_diMMEj4-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43907716246-3cdb3aoubriqn5snhbf9aauahgq0uer6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "43907716246-vcq3cdde84mrv3ht7vidsf8aqnfsogvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.androplaza.whocaller"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

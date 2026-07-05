@@ -1,0 +1,28 @@
+# Android files to ignore
+**/local.properties
+**/.gradle/
+**/build/
+**/app/build/
+**/.idea/
+**/*.apk
+**/*.aar
+**/*.ap_
+
+# Laravel files to ignore
+**/vendor/
+**/node_modules/
+**/.env
+**/.env.backup
+**/.env.production
+**/public/storage
+**/storage/*.key
+**/bootstrap/cache/*
+**/storage/framework/cache/data/*
+**/storage/framework/sessions/*
+**/storage/framework/testing/*
+**/storage/framework/views/*
+**/storage/logs/*
+
+# OS/System files
+.DS_Store
+Thumbs.db

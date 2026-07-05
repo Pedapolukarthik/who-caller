@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Company : AndroPlaza
+  ~ Detailed : Software Development Company in Sri Lanka
+  ~ Developer : Buddhika
+  ~ Contact : support@androplaza.store
+  ~ Whatsapp : +94711920144
+  -->
+
+<resources>
+
+    <string name="app_name">Whocaller</string>
+
+    <!--google admob keys-->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+
+    <string name="twilid_id">YOUR_TWILIO_ACCOUNT_SID</string>
+    <string name="twilid_auth_token">YOUR_TWILIO_AUTH_TOKEN</string>
+
+    <string name="onesignal_app_id">83a67075-c04a-4202-965d-d6c90cfe337f</string>
+
+    <string name="google_web_client_id">43907716246-3cdb3aoubriqn5snhbf9aauahgq0uer6.apps.googleusercontent.com</string>
+
+    <string name="privacy_policy_link">https://androplza.blogspot.com/2024/08/whocaller-privacy-policy.html</string>
+    <string name="terms_conditions_link">https://androplza.blogspot.com/2024/08/whocaller-terms-conditions.html</string>
+
+
+    <string name="made_with_in">Made With ❤ in AndroPlaza</string>
+    <string name="toast_improving">Thanks for improving whocaller !</string>
+    <string name="maintenance_title">Temporarily Down for Maintenance</string>
+    <string name="maintenance_description">we are performing scheduled maintenance. we should be back online shortly.</string>
+    <string name="try_again_later">Try again later</string>
+
+    <string name="redirect_title">New App Updates</string>
+    <string name="redirect_message">This application has expired and is no longer used, press the button below to download and install the latest update of this application.</string>
+    <string name="redirect_button">Download Update Now</string>
+    <string name="skip_for_now">Skip for now</string>
+    <string name="update_app">Update App</string>
+
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sing">Sign Up</string>
+    <string name="welcome_back">Welcome Back 👋</string>
+    <string name="log_in_to_your_existing_account">Log in to your existing account</string>
+    <string name="email_mobile_no">Email</string>
+    <string name="forgot_password">Forgot Password!</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="emobileno">Enter Mobile No</string>
+    <string name="epassword">Enter Password</string>
+    <string name="sign_phone">Sign in with Mobile</string>
+    <string name="let_s_get_started">Let\'s get Started!</string>
+    <string name="create_an_account_on_to_use_all_nthe_features">Create an account on to use all the features</string>
+    <string name="ename">Enter Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="by_signing_up_yo">By signing up, you agree to our Terms and Policy</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="if_you_have_an_account">If you have an account?</string>
+    <string name="login_here">Login Here</string>
+    <string name="spinner_title">Select Cuntry</string>
+    <string name="evalisemail">Enter Valid Email</string>
+    <string name="evalidmobile">Enter Valid mobile</string>
+
+    <string name="enter_your_phone_number">Enter your Phone Number</string>
+    <string name="we_will_send_you_the_6_digit_verification_code">Please enter your phone number, We will send you the 6 digit verification code</string>
+    <string name="country_code">Country Code</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="generate_otp">Generate OTP</string>
+    <string name="reste_password">Reset Password</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="we_will_send_reset_link">Please enter your email, we will send verification code to your email.</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="search_number_names">Search number , names</string>
+    <string name="search">Search</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your password</string>
+    <string name="or_with">Or with</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="name">Name</string>
+    <string name="your_name">Your name</string>
+    <string name="phone">Phone</string>
+    <string name="number">Number</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="verification_phone">Verification Phone</string>
+    <string name="verification_description">Please enter the code we just sent to phone number</string>
+    <string name="continue_">Continue</string>
+    <string name="didn_t_receive_a_code">If you didn’t receive a code?</string>
+    <string name="resend">Resend</string>
+    <string name="profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="my_account">My Account</string>
+    <string name="save_changes">Save changes</string>
+    <string name="call_history">Call History</string>
+    <string name="view_all">VIEW ALL</string>
+    <string name="in_your_contacts">IN YOUR CONTACTS</string>
+    <string name="call">Call</string>
+    <string name="edit">Edit</string>
+    <string name="block">Block</string>
+    <string name="save">Save</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="unblock">Unblock</string>
+    <string name="searching">Searching..</string>
+    <string name="name_or_number">Enter Valid Name or Number</string>
+    <string name="share">Share</string>
+    <string name="copy_name">Copy Name</string>
+    <string name="copy_number">Copy Number</string>
+    <string name="copy_contact">Copy Contact</string>
+    <string name="check_internet">Please check your internet Connection</string>
+    <string name="favourites">Favourites</string>
+    <string name="contacts">Contacts</string>
+    <string name="contacts_safe_description">Your contacts are safe and will not be shared with anyone</string>
+    <string name="likely_a_business">Likely a business</string>
+    <string name="not_a_business_or_wrong_name">Not a business or wrong name?</string>
+    <string name="suggest_a_better_name">Suggest a better name</string>
+    <string name="business">Business</string>
+    <string name="person">Person</string>
+    <string name="add_tag">Add tag</string>
+    <string name="more_info_available">More info available</string>
+    <string name="upgrade_to_premium_to_view">Upgrade to Premium to view</string>
+    <string name="add_new_contact">Add new contact</string>
+    <string name="is_this_a_business">Is this a business ?</string>
+    <string name="describe_it_to_improve_whocaller">Describe it to improve WhoCaller</string>
+    <string name="no_contacts_found">No contacts found !</string>
+    <string name="outgoing_calls">Outgoing calls</string>
+    <string name="incoming_calls">Incoming calls</string>
+    <string name="missed_calls">Missed calls</string>
+    <string name="blocked_calls">Blocked calls</string>
+    <string name="rejected_calls">Rejected calls</string>
+    <string name="show_all_calls">Show all calls</string>
+    <string name="envalid_number">Invalid phone number</string>
+    <string name="incoming_call">Incoming call</string>
+    <string name="identified_by_whocaller">Identified by whocaller</string>
+    <string name="likely_a_person">Likely a person</string>
+    <string name="settings">Settings</string>
+    <string name="about_us">About Us</string>
+
+    <string name="notification">Notification</string>
+    <string name="security_and_privacy"><![CDATA[Security & Privacy]]></string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="complete_your_profile">Complete your profile</string>
+    <string name="_20">20%</string>
+    <string name="caller_id_stats">Caller ID Stats</string>
+    <string name="unknown_numbers_identified">Unknown numbers identified</string>
+    <string name="spam_calls_identified">Spam calls identified</string>
+    <string name="blocked_contacts">Blocked contacts</string>
+    <string name="all_incoming_calls">All incoming calls</string>
+    <string name="all_outgoing_calls">All outgoing calls</string>
+
+
+    <string name="whocaller_contact_search">Whocaller - Contact Search</string>
+    <string name="search_description">Discover who’s calling with Whocaller ! \nUse our powerful search tool to find \ncontacts by name or number. \nQuickly access all related and matching contacts, \nensuring you always know who\'s on the other end. \nStay connected and informed effortlessly..</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">Unmute</string>
+    <string name="keypad">Keypad</string>
+    <string name="speaker">Speaker</string>
+    <string name="hold">Hold</string>
+    <string name="add_call">Add Call</string>
+    <string name="block_spam_contacts"><![CDATA[Block & Spam Contacts]]></string>
+    <string name="share_text">I Would like to share this Whocaller - Android CallerID App with you. Here You Can Download This Application from PlayStore</string>
+
+    <!--About-->
+    <string name="about">About Us</string>
+    <string name="rate_the_app">Rate the app</string>
+    <string name="love_this_app">Love this app? Let us Know in the Google Play Store how we can make it even better</string>
+    <string name="share_the_app">Share the app with your friends and family</string>
+    <string name="company">Company</string>
+    <string name="company_name">AndroPlaza</string>
+    <string name="email">Email</string>
+    <string name="version">Version</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="contact_number">+94711920144</string>
+    <string name="report_contact">Report Contact</string>
+    <string name="revoke_report">Revoke Report</string>
+
+    <string name="data_process_icon">Data Process Icon</string>
+    <string name="data_use_icon">Data Use Icon</string>
+    <string name="empower_icon">Empower Icon</string>
+    <string name="permissions">Permissions</string>
+    <string name="delete">Delete</string>
+    <string name="location">Location</string>
+    <string name="no_call_history">No call history..</string>
+
+    <string name="show_information_during_phone_calls">Show information during phone calls</string>
+    <string name="sound_and_notifications">Sound and notifications</string>
+    <string name="caller_id">Caller ID</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="feedback">Feedback</string>
+    <string name="choose_email">Choose an app</string>
+    <string name="check_update">Check For Update</string>
+    <string name="show_info_during_call">Show info during call</string>
+    <string name="show_caller_id">Show Caller ID</string>
+    <string name="country_region">Country / Region</string>
+    <string name="show_caller_id_for_contacts">Show Caller ID for contacts</string>
+    <string name="show_after_call_details">Show after call details</string>
+    <string name="choose_popup_position">Choose Popup Position</string>
+    <string name="center">Center</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="search_contacts">Search contacts</string>
+    <string name="_0">0</string>
+    <string name="contacts_dialog_head">Add Your Phone Number</string>
+    <string name="contacts_dialog_des">Please add your phone number to continue using this app.</string>
+    <string name="ok">OK</string>
+    <string name="calls">Calls</string>
+    <string name="agree_and_continue"><![CDATA[AGREE & CONTINUE]]></string>
+    <string name="menu_privacy">Privacy Policy</string>
+    <string name="set_caller_id_as_default_dialer">"To enjoy enhanced calling experience with advanced features
+Set Whocaller as your default phone app."</string>
+    <string name="set_as_default">Set As Default</string>
+    <string name="caller_id_disabled">Caller ID Disabled</string>
+    <string name="unknown">Unknown</string>
+    <string name="end_call">End call</string>
+
+    <string name="select_sim_for_calling">Select SIM For Calling</string>
+    <string name="always_use_this_sim_for_calling">Always use this SIM for calling</string>
+    <string name="cancel">Cancel</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="new_contact">Create New Contact</string>
+    <string name="edit_contact">Edit Contact</string>
+
+
+</resources>

@@ -1,0 +1,471 @@
+﻿<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+  <title>Documentation by "AndroPlaza"</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+</head>
+
+<body>
+  <section id="header">
+    <header> <span class="image avatar"><img src="images/app_icon.png" alt="" /></span>
+      <h4 id="logo">Whocaller Guide By AndroPlaza</h4>
+    </header>
+    <nav id="nav">
+      <ul>
+        <li><a href="#eclipseversion" class="active"><i class="fa fa-hand-o-right"></i> Which Android Studio version is
+            needed?</a></li>
+        <li><a href="#importproject"><i class="fa fa-hand-o-right"></i> How to open the project in Android Studio?</a>
+        </li>
+        <li><a href="#packagename"><i class="fa fa-hand-o-right"></i> How to change the package name?</a></li>
+        <li><a href="#firebase"><i class="fa fa-hand-o-right"></i> How to config firebase?</a></li>
+        <li><a href="#appname"><i class="fa fa-hand-o-right"></i> How to change app name?</a></li>
+        <li><a href="#privacy"><i class="fa fa-hand-o-right"></i> How to change privacy policy ?</a></li>
+        <li><a href="#onesignal"><i class="fa fa-hand-o-right"></i> How to change onesignal & google web client id ?</a>
+        </li>
+        <li><a href="#twilio"><i class="fa fa-hand-o-right"></i> How to change twilio id ?</a></li>
+        <li><a href="#color"><i class="fa fa-hand-o-right"></i> How to change colors ?</a></li>
+        <li><a href="#splash"><i class="fa fa-hand-o-right"></i> How to change Splash Screen, Application Icon and Other
+            icons?</a></li>
+        <li><a href="#admob"><i class="fa fa-hand-o-right"></i> How to Change base url?</a></li>
+        <li><a href="#key"><i class="fa fa-hand-o-right"></i> How to Change Api key?</a></li>
+        <li><a href="#Work"><i class="fa fa-hand-o-right"></i> How to Work Whocaller App?</a></li>
+        <li><a href="#signapk"><i class="fa fa-hand-o-right"></i> How to Generate Signed APK?</a></li>
+        <li><a href="#graphics"><i class="fa fa-hand-o-right"></i> Graphics</a></li>
+        <li><a href="#showcase"><i class="fa fa-hand-o-right"></i> App Showcase</a></li>
+        <li><a href="#rating"><i class="fa fa-hand-o-right"></i> Rating</a></li>
+        <li><a href="#credits"><i class="fa fa-hand-o-right"></i> Credits</a></li>
+      </ul>
+    </nav>
+  </section>
+  <div id="wrapper">
+    <div id="main">
+      <section id="one">
+        <div class="container">
+          <header class="major">
+            <h2>Whocaller Guide By AndroPlaza</h2>
+          </header>
+          <div class="borderTop">
+            <div class="span-6 colborder info prepend-1">
+              <p class="prepend-top"> <strong>Created:- 04 Sep 2024<br>
+                  Company:- AndroPlaza - Srilanka<br>
+                  Contact:- <a href="https://codecanyon.net/user/androplaza" style='color:#0e8bcb'
+                    target="_blank">Codecanyon Profile</a> </strong> </p>
+            </div>
+            <div class="span-12 last">
+              <p class="prepend-top append-0">Thank you for purchasing my application. If you have any questions that
+                are beyond the scope of this help file, please send me email <a href="mailto:mallikadias16@gmail.com"
+                  style='color:#0e8bcb' target="_blank">mallikadias16@gmail.com</a>. Don't forget to give me a nice
+                review for the app. Thanks so much!</p>
+            </div>
+          </div>
+          <div class="section_bdr"></div>
+          <section id="eclipseversion">
+            <div class="container"> <br>
+              <h2>Which Android Studio version is needed?</h2>
+              <p>Latest Android Studio version is recommended, which can be downloaded from here:<br />
+                <a style="color:#0e8bcb" href="http://developer.android.com/intl/en/sdk/index.html"
+                  target="_blank">http://developer.android.com/intl/en/sdk/index.html</a>
+              </p>
+              <span class="lightbox"> <img src="images/android_studio_ver.png" alt="" width="90%" /> </span>
+              <br>
+              <span class="lightbox"><img src="images/android_studio_ver_2.png" alt="" /> </span>
+              <div class="section_bdr"></div>
+            </div>
+          </section>
+          <section id="importproject">
+            <div class="container"> <br>
+              <h2>How to Open The Project in Android Studio?</h2>
+              <ul class="feature_list">
+                <li>Open Android Studio > Open an Existing Android Studio Project > Select Your Project build. gradle
+                  file > ok </li>
+                <li>Select Project</li>
+              </ul>
+              <span class="lightbox"><img src="images/import_1.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/import_2.png" alt="" /> </span>
+              <div class="section_bdr"></div>
+            </div>
+          </section>
+
+
+
+          <section id="packagename">
+            <div class="container"> <br>
+              <h2>How to change the package name? </h2>
+              <p>You can change it easily from Android Studio. Here are the steps:</p>
+              <ul class="feature_list">
+                <li>In the Project pane, click on the little gear icon. Uncheck/Deselect the Compact Empty Middle
+                  Packages option.</li>
+                <li>Your package directory will now be broken up in individual directories.</li>
+                <li>Individually select each directory you want to rename, and: Right-click itSelect RefactorClick on
+                  Rename in the Pop-up dialog.</li>
+                <li>Click on Rename Package instead of Rename Directory Enter the new name and hit Refactor and allow a
+                  minute to let Android Studio update all changes.</li>
+                <li>Now open your build.gradle (Usually 'app' or 'mobile'). Update the applicationId to your Package
+                  Name and Sync Gradle, if it hasn't already been updated automatically.</li>
+              </ul>
+              <p style="font-size:18px"><b>Note:</b> When renaming com in Android Studio, it might give a warning. In
+                such case, select Rename All.</p>
+              <span class="lightbox"><img src="images/packagename_1.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_2.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_3.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_4.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_5.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_6.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/packagename_7.png" alt="" /> </span>
+              <div class="section_bdr"></div>
+            </div>
+          </section>
+
+
+
+          <div class="section_bdr"></div>
+          <section id="firebase">
+            <div class="container"> <br>
+              <h2>How to config firebase ?</h2>
+              <p>Before you do step change the package name, you must do this step for firebase project configuration
+                Please note : this step is mandatory to generate google-services.json file
+              </p>
+
+              <br>
+              <iframe width="900" height="500" src="https://www.youtube.com/embed/_iebluzdg4Q?si=zaType1P63c_0PLC"
+                frameborder="0" allowfullscreen=""></iframe>
+              <br><br>
+
+              <p>Copy the google-services.json file that you have downloaded and put it in the Android Studio project.
+              </p>
+
+              <span class="lightbox"><img src="images/firebase.png" alt="" /> </span>
+              <br>
+              <span class="lightbox"><img src="images/firebase2.png" alt="" /> </span>
+
+
+
+            </div>
+          </section>
+          <div class="section_bdr"></div>
+
+
+          <section id="appname">
+            <div class="container"> <br>
+              <h2>How to change app name</h2>
+              <ul class="feature_list">
+                <li>Open Android Studio > app> res > values > strings.xml</li>
+                <li>Enter your app name inside <b style="color:#0e8bcb">"app_name"</b> string tag:<br />
+                  <code>&lt;string name="app_name"&gt;<b>Whocaller</b>&lt;/string&gt;</code>
+                </li>
+
+              </ul>
+              <span class="lightbox"><img src="images/appname_1.png" alt="" /> </span>
+            </div>
+          </section>
+          <div class="section_bdr"></div>
+
+          <section id="privacy">
+            <div class="container"> <br>
+              <h2>How to change Privacy Policy ?</h2>
+              <ul class="feature_list">
+                <li>Enter your privacy policy url <b style="color:#0e8bcb">"privacy_policy_link"</b> string tag:<br />
+                  <code>&lt;string name="privacy_policy_link"&gt;<b>your url</b>&lt;/string&gt;</code>
+                </li>
+
+                <li>Enter your terms & conditions url <b style="color:#0e8bcb">"terms_conditions_link"</b> string
+                  tag:<br />
+                  <code>&lt;string name="terms_conditions_link"&gt;<b>your url</b>&lt;/string&gt;</code>
+                </li>
+                <span class="lightbox"><img src="images/privacy.png" alt="" /> </span>
+                <br>
+            </div>
+          </section>
+
+
+
+          <div class="section_bdr"></div>
+          <section id="onesignal">
+            <div class="container"> <br>
+              <h2>How to change onesignal & google web client id ?</h2>
+              <ul class="feature_list">
+                <li>Enter your onesignal app id <b style="color:#0e8bcb">"onesignal_app_id"</b> string tag:<br />
+                  <code>&lt;string name="onesignal_app_id"&gt;<b>your_id</b>&lt;/string&gt;</code>
+                </li>
+                <li>Enter google web client id <b style="color:#0e8bcb">"google_web_client_id"</b> string tag:<br />
+                  <code>&lt;string name="google_web_client_id"&gt;<b>your_id</b>&lt;/string&gt;</code>
+                </li>
+                <span class="lightbox"><img src="images/onesignal.png" alt="" /> </span>
+                <br>
+                <br>
+              
+            </div>
+          </section>
+
+
+          <div class="section_bdr"></div>
+          <section id="twilio">
+            <div class="container"> <br>
+              <h2>How to change twilio id ?</h2>
+              <ul class="feature_list">
+                <li>Enter your twilio app id <b style="color:#0e8bcb">"twilid_id"</b> string tag:<br />
+                  <code>&lt;string name="twilid_id"&gt;<b>your_id</b>&lt;/string&gt;</code>
+                </li>
+                <li>Enter your twilio auth token <b style="color:#0e8bcb">"twilid_auth_token"</b> string tag:<br />
+                  <code>&lt;string name="twilid_auth_token"&gt;<b>your_id</b>&lt;/string&gt;</code>
+                </li>
+                <span class="lightbox"><img src="images/twilio.png" alt="" /> </span>
+                <br>
+                <br>
+                <iframe width="900" height="500" src="https://www.youtube.com/embed/HcmWcfv56f4?si=7IipEXwp-M5H5Hjl"
+                  frameborder="0" allowfullscreen=""></iframe>
+                <br>
+            </div>
+          </section>
+
+
+
+
+          <div class="section_bdr"></div>
+          <section id="color">
+            <div class="container"> <br>
+              <h2>How to change colors ?</h2>
+              <b>You can customize the app color with your own color by editing <b
+                  style="color:#0e8bcb">"res/values/colors.xml"</b>
+                <br><br>
+                <span class="lightbox"><img src="images/colors.png" alt="" /> </span>
+                <br>
+            </div>
+          </section>
+
+
+          <div class="section_bdr"></div>
+          <section id="splash">
+            <div class="container"> <br>
+              <h2>How to change Splash Screen, Application Icon and Other icons?</h2>
+              <ul class="feature_list">
+                <li>Rename your square icon with <b style="color:#0e8bcb">ic_launcher.png</b> and paste in mipmap folder
+                </li>
+                <li>Make sure the selected Res Directory is "Main" → Finish </li>
+                <li>Make sure the resource name is <b style="color:#0e8bcb">"ic_launcher"</b> → Next </li>
+                <li>Browse and choose your image file icon (.png) format with square dimension and start customize your
+                  icon</li>
+                <li>Recommended to use <b style="color:#0e8bcb">Launcher Icon (Adaptive and Legacy)</b> </li>
+                <li>You can choose 2 types of your icon type, that is <b style="color:#0e8bcb"> Launcher Icon (Adaptive
+                    and Legacy) or (Legacy Only)</b> </li>
+                <li>Open Android Studio → File → New → Image Asset </li>
+              </ul>
+              <span class="lightbox"><img src="images/appicon.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/appicon2.png" alt="" /> </span>
+              <span class="lightbox"><img src="images/appicon3.png" alt="" /> </span>
+              <div class="section_bdr"></div>
+              <br>
+              <p><b>How To Change Splash Screen </b></p>
+              <ul class="feature_list">
+                <li>Open Android Studio > app > res > drawable > <b style="color:#0e8bcb">splash_bg.png</b></li>
+                <li>Rename your splash screen image with <b style="color:#0e8bcb">splash_bg.png</b> and paste in
+                  drawable
+                  folder</li>
+              </ul>
+              <span class="lightbox"><img src="images/splash.png" alt="" /> </span><br><br>
+
+            </div>
+          </section>
+
+
+          <div class="section_bdr"></div>
+          <section id="admob">
+            <div class="container"> <br>
+              <h2>How to Change base url?</h2>
+              <ul class="feature_list">
+                <li>Android Studio > app > java > Config.java</li>
+
+                <li>Enter your base url inside <b style="color:#0e8bcb">"BASE_URL"</b>
+                  string tag:<br />
+
+                </li>
+              </ul>
+              <span class="lightbox"><img src="images/base_url.png" alt="" /> </span>
+
+            </div>
+
+
+
+            <div class="section_bdr"></div>
+            <section id="key">
+              <div class="container"> <br>
+                <h2>How to Change Api key?</h2>
+                <ul class="feature_list">
+                  <li>Android Studio > app > java > Config.java</li>
+
+                  <li>Enter your api key inside <b style="color:#0e8bcb">"API_KEY"</b>
+                    string tag:<br />
+
+                  <li>How to get api key, watch the video below</li>
+
+                  </li>
+                </ul>
+                <span class="lightbox"><img src="images/api_key.png" alt="" /> </span>
+
+                <br>
+                <iframe width="900" height="500" src="https://www.youtube.com/embed/ywIRJp6lUfI?si=TQXnkrezusOXKNWd"
+                  frameborder="0" allowfullscreen=""></iframe>
+                <br><br>
+              </div>
+
+
+              <div class="section_bdr"></div>
+              <section id="Work">
+                <div class="container"> <br>
+                  <h2>How to work whocaller App?</h2>
+                  <br>
+                  <iframe width="900" height="500" src="https://www.youtube.com/embed/e76mtw53kbs?si=QAeaHF9SnsF1wNPD" frameborder="0" allowfullscreen=""></iframe>
+                  <br>
+                  <iframe width="900" height="500" src="https://www.youtube.com/embed/pxyQJCiffic?si=89NuVYsifnn080bT" frameborder="0" allowfullscreen=""></iframe>
+                  <br>
+                </div>
+
+
+
+                <div class="section_bdr"></div>
+                <section id="signapk">
+                  <div class="container"> <br>
+                    <h2>How to Generate Signed APK?</h2>
+                    <p><b>Create New Keystore</b></p>
+                    <ul class="feature_list">
+                      <li>Click Build > Generate Signed APK</li><br>
+                      <span class="lightbox"> <img src="images/signapk_1.png" alt="" /> </span>
+                      <li>Select APK and click Next</li><br>
+                      <span class="lightbox"><img src="images/signapk_2.png" alt="" /> </span>
+                      <li>Click On Create New or if you are updating app click choose existing</li><br>
+                      <span class="lightbox"><img src="images/signapk_3.png" alt="" /> </span>
+                      <li>Select Keystore Path</li>
+                      <li>Enter Keystore password and confirm password</li>
+                      <li>Enter any name for alias</li>
+                      <li>Enter key password and confirm password</li>
+                      <li>Choose Validity Years</li>
+                      <li>Fill rest of the details and click OK</li><br>
+                      <span class="lightbox"><img src="images/signapk_4.png" alt="" /> </span>
+                      <li>Enter keystore password, alias name and key password and click next</li><br>
+                      <span class="lightbox"><img src="images/signapk_5.png" alt="" /> </span>
+                      <li>Choose the signed apk destination</li>
+                      <li>Tick the signatures</li>
+                      <li>Click Finish</li><br>
+                      <span class="lightbox"> <img src="images/signapk_6.png" alt="" /> </span>
+                    </ul>
+                    <p><b style="color:#ff0000;font-size:18px;">Note :- Please save the keystore and remember the
+                        keystore
+                        password, alias and key password. If you want to update app in future you have to use this
+                        keystore.
+                        With new keystore you cannot update your app</b></p>
+                  </div>
+                </section>
+
+
+
+
+                <div class="section_bdr"></div>
+                <section id="graphics">
+                  <div class="container"> <br>
+                    <h2>Change App all graphics</h2>
+                    <p>You will find all image into /res/drawable-mdpi/,/res/drawable-hdpi/,/res/drawable-xhdpi/ folder.
+                      Just create your own graphics and replace those files. Create seperate graphics of different
+                      device
+                      screen sizes & place them into other drawble folders (drawable-hdpi & drawable-xhdpi) with same
+                      file
+                      name found at drawable-mdpi folder. Check here for more information: <a style="color:#0e8bcb"
+                        href="http://developer.android.com/design/style/devices-displays.html" target="_blank">Devices
+                        and
+                        Displays</a> & <a style="color:#0e8bcb"
+                        href="http://developer.android.com/guide/practices/screens_support.html"
+                        target="_blank">Supporting
+                        Multiple Screens</a>.</p>
+                    <span class="lightbox"><img src="images/Graphics_1.png" alt="" /></span>
+                    <span class="lightbox"><img src="images/Graphics_2.png" alt="" /></span>
+                    <div class="section_bdr"></div>
+                  </div>
+                </section>
+                <section id="showcase">
+                  <div class="container"> <br>
+                    <h2>Application Showcase in PlayStore</h2>
+                    <p>Once you will publish your app to Google Play or any other Android store, send us your app link.
+                      We
+                      will happy to showcase your app into our website & Codecanyon page.</p>
+                    <div class="section_bdr"></div>
+                  </div>
+                </section>
+                <section id="rating">
+                  <div class="container"> <br>
+                    <h2>Rating</h2>
+                    <p>If you like our app, we will highly appreciate if you can provide us a rating of 5. You can rate
+                      us
+                      from your Codecanyon Menu > Download page.</p>
+                    <div class="section_bdr"></div>
+                  </div>
+                </section>
+                <hr>
+                <p>Once again, thank you so much for purchasing this app. As I said at the beginning, I'd be glad to
+                  help
+                  you if you have any questions relating to this app. No guarantees, but I'll do my best to assist. If
+                  you
+                  have a more general question relating to the apps on Codecanyon, you might consider visiting the "FAQ
+                  /
+                  Support" section and asking your question in the "Comments" section at Codecanyon app detail page.</p>
+                <p class="append-bottom alt large"><strong>Shashini Dilshara</strong><br />
+                  <strong><a style="color:#0e8bcb" href='http://fb.com' target='_blank'>AndroPlaza -
+                      SriLanka</a></strong>
+                </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer">
+        <div class="container">
+          <ul class="copyright">
+            <li>
+              <h3><span style="color:#0e8bcb;font-style:italic">Shashini</span> <span
+                  style="color:#79b800;font-style:italic">Dilshara</span></h3>
+            </li>
+            <li><a href="http://fb.com/" target="_blank"><span style="color:#9f9f9f;font-style:italic">AndroPlaza
+                  SriLanka</span></a></li>
+          </ul>
+          <div class="social_icon">
+            <ul class="icons">
+              <li><a href="https://www.facebook.com/" target="_blank" class="icon fa-facebook"><span
+                    class="label">Facebook</span></a></li>
+              <li><a href="emailto:mallikadias16@gmail.com" target="_blank" class="icon fa fa-google-plus"><span
+                    class="label">Email</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    </section>
+  </div>
+  </div>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollzer.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+      $('.scrollup').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+  <div><a href="#" class="scrollup">Scroll</a></div>
+</body>
+
+</html>
