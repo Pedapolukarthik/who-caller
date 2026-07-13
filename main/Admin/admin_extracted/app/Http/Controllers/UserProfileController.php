@@ -262,7 +262,15 @@ class UserProfileController extends Controller
 
                 return response()->json(['status' => 'success', 'message' => 'Profile updated successfully'], 200);
             } else {
-                return response()->json(['status' => 'error', 'message' => 'User not found'], 404);
+                // Self-healing: if the profile does not exist at all in the database, create it now
+                $newUser = UserProfile::create([
+                    'first_name' => $request->input('first_name'),
+                    'last_name' => $request->input('last_name'),
+                    'email' => $request->input('email'),
+                    'phone' => $request->input('phone'),
+                    'imgUrl' => $request->input('imgUrl'),
+                ]);
+                return response()->json(['status' => 'success', 'message' => 'Profile created and updated successfully', 'user' => $newUser], 200);
             }
         } catch (\Exception $e) {
             return response()->json(['status' => 'error', 'message' => 'An error occurred while updating the profile'], 500);
