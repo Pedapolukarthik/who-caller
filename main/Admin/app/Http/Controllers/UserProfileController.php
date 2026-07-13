@@ -95,50 +95,93 @@ class UserProfileController extends Controller
     }
     public function registerPhone(Request $request)
     {
-
-        $validatedData = $request->validate([
-            'phone' => 'required|string|max:15|unique:user_profiles',
+        $request->validate([
+            'phone' => 'required|string|max:20',
         ]);
 
-        $userProfile = UserProfile::create($validatedData);
+        $phone = $request->input('phone');
+        $userProfile = UserProfile::where('phone', $phone)->first();
+
+        if (!$userProfile) {
+            $userProfile = UserProfile::create([
+                'phone' => $phone,
+            ]);
+        }
 
         return response()->json(['message' => 'User profile created successfully', 'user' => $userProfile], 201);
     }
 
     public function registerEmail(Request $request)
     {
-
-
-        $validatedData = $request->validate([
+        $request->validate([
             'first_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:user_profiles',
+            'email' => 'required|string|email|max:255',
             'phone' => 'required|string|max:20',
-
         ]);
 
-        $userProfile = UserProfile::create($validatedData);
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+        $firstName = $request->input('first_name');
 
+        // Check if email is already taken by a different user profile
+        $userByEmail = UserProfile::where('email', $email)->first();
+        if ($userByEmail && $userByEmail->phone !== $phone) {
+            return response()->json([
+                'message' => 'The email has already been taken.',
+                'errors' => ['email' => ['The email has already been taken.']]
+            ], 422);
+        }
+
+        // Check if phone is already registered
+        $userByPhone = UserProfile::where('phone', $phone)->first();
+
+        if ($userByPhone) {
+            // Update the existing phone record with email and first name
+            $userByPhone->email = $email;
+            $userByPhone->first_name = $firstName;
+            $userByPhone->save();
+            $userProfile = $userByPhone;
+        } else if ($userByEmail) {
+            // Update the existing email record with phone and first name
+            $userByEmail->phone = $phone;
+            $userByEmail->first_name = $firstName;
+            $userByEmail->save();
+            $userProfile = $userByEmail;
+        } else {
+            // Create a new profile
+            $userProfile = UserProfile::create([
+                'first_name' => $firstName,
+                'email' => $email,
+                'phone' => $phone,
+            ]);
+        }
 
         return response()->json(['message' => 'User profile created successfully', 'user' => $userProfile], 201);
     }
 
     public function registerGoogle(Request $request)
     {
-        Log::info('Received registration request', ['request_data' => $request->all()]);
         try {
-            $validatedData = $request->validate([
+            $request->validate([
                 'first_name' => 'required|string|max:255',
-                'email' => 'required|string|email|max:255|unique:user_profiles',
-                'imgUrl' => 'string|max:1000',
-
+                'email' => 'required|string|email|max:255',
+                'imgUrl' => 'nullable|string|max:1000',
             ]);
 
-            $userProfile = UserProfile::create($validatedData);
+            $email = $request->input('email');
+            $userProfile = UserProfile::where('email', $email)->first();
+
+            if (!$userProfile) {
+                $userProfile = UserProfile::create([
+                    'first_name' => $request->input('first_name'),
+                    'email' => $email,
+                    'imgUrl' => $request->input('imgUrl'),
+                ]);
+            }
 
             return response()->json(['message' => 'User profile created successfully', 'user' => $userProfile], 201);
 
         } catch (\Exception $e) {
-            Log::error('registerGoogle error', ['message' => 'Registration failed', 'error' => $e->getMessage()]);
             return response()->json(['message' => 'Registration failed', 'error' => $e->getMessage()], 500);
         }
     }
@@ -174,8 +217,6 @@ class UserProfileController extends Controller
 
     public function updateProfile(Request $request)
     {
-        //Log::info('Received registration request', ['request_data' => $request->all()]);
-
         try {
             $phoneNumber = $request->input('phone');
             $user = UserProfile::where('phone', $phoneNumber)->first();
@@ -183,7 +224,23 @@ class UserProfileController extends Controller
             $email = $request->input('email');
             $user2 = UserProfile::where('email', $email)->first();
 
-            if ($user) {
+            if ($user && $user2 && $user->id !== $user2->id) {
+                // Both profiles exist and are different.
+                // We merge $user2 (email/Google profile) into $user (phone profile).
+                // First delete $user2 to avoid duplicate email/phone unique constraint conflicts.
+                \Illuminate\Support\Facades\DB::transaction(function () use ($user, $user2, $request) {
+                    $user2->delete();
+
+                    $user->first_name = $request->input('first_name') ?: $user->first_name;
+                    $user->last_name = $request->input('last_name') ?: $user->last_name;
+                    $user->email = $request->input('email');
+                    $user->imgUrl = $request->input('imgUrl') ?: $user->imgUrl;
+                    $user->phone = $request->input('phone');
+                    $user->save();
+                });
+
+                return response()->json(['status' => 'success', 'message' => 'Profile updated successfully'], 200);
+            } else if ($user) {
                 $user->first_name = $request->input('first_name');
                 $user->last_name = $request->input('last_name');
                 $user->email = $request->input('email');
@@ -192,8 +249,6 @@ class UserProfileController extends Controller
                 // Update other fields as necessary
 
                 $user->save();
-
-                //Log::info('Profile updated successfully', ['user_id' => $user->id]);
 
                 return response()->json(['status' => 'success', 'message' => 'Profile updated successfully'], 200);
             } else if ($user2) {
@@ -205,17 +260,11 @@ class UserProfileController extends Controller
 
                 $user2->save();
 
-                //Log::info('Profile updated successfully', ['user_id' => $user2->id]);
-
                 return response()->json(['status' => 'success', 'message' => 'Profile updated successfully'], 200);
             } else {
-                //Log::warning('User not found', ['request_data' => $request->all()]);
-
                 return response()->json(['status' => 'error', 'message' => 'User not found'], 404);
             }
         } catch (\Exception $e) {
-            //Log::error('Error updating profile', ['error' => $e->getMessage(), 'request_data' => $request->all()]);
-
             return response()->json(['status' => 'error', 'message' => 'An error occurred while updating the profile'], 500);
         }
     }
